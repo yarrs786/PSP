@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор | Стиль Госуслуг</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Сам калькулятор -->
+        <div class="calculator">
+
+            <!-- Цель работы (сверху калькулятора) -->
+            <div class="calculator__purpose">
+                <strong>Цель ЛР:</strong> 
+                Знакомство с инструментами построения пользовательских интерфейсов web-сайтов: 
+                HTML, CSS.
+            </div>
+
+            <!-- Экран калькулятора -->
+            <div id="result" class="calculator__screen">
+                0
+            </div>
+
+            <!-- Сетка с кнопками -->
+            <div class="calculator__buttons">
+                <!-- Ряд 1 -->
+                <div class="calc-row">
+                    <button id="btn_op_clear"   class="calc-btn calc-btn--function">C</button>
+                    <button id="btn_op_sign"    class="calc-btn calc-btn--function">+/-</button>
+                    <button id="btn_op_percent" class="calc-btn calc-btn--function">%</button>
+                    <button id="btn_op_div"     class="calc-btn calc-btn--operation">/</button>
+                </div>
+
+                <!-- Ряд 2 -->
+                <div class="calc-row">
+                    <button id="btn_digit_7" class="calc-btn">7</button>
+                    <button id="btn_digit_8" class="calc-btn">8</button>
+                    <button id="btn_digit_9" class="calc-btn">9</button>
+                    <button id="btn_op_mult" class="calc-btn calc-btn--operation">x</button>
+                </div>
+
+                <!-- Ряд 3 -->
+                <div class="calc-row">
+                    <button id="btn_digit_4" class="calc-btn">4</button>
+                    <button id="btn_digit_5" class="calc-btn">5</button>
+                    <button id="btn_digit_6" class="calc-btn">6</button>
+                    <button id="btn_op_minus" class="calc-btn calc-btn--operation">-</button>
+                </div>
+
+                <!-- Ряд 4 -->
+                <div class="calc-row">
+                    <button id="btn_digit_1" class="calc-btn">1</button>
+                    <button id="btn_digit_2" class="calc-btn">2</button>
+                    <button id="btn_digit_3" class="calc-btn">3</button>
+                    <button id="btn_op_plus" class="calc-btn calc-btn--operation">+</button>
+                </div>
+
+                <!-- Ряд 5 -->
+                <div class="calc-row">
+                    <button id="btn_digit_0" class="calc-btn calc-btn--zero">0</button>
+                    <button id="btn_digit_dot" class="calc-btn">.</button>
+                    <button id="btn_op_equal" class="calc-btn calc-btn--execute">=</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="footer">
+            <p>ЛР выполнена Гавриликом Я.С.</p>
+            <a href="https://github.com/iu5git/JavaScript/tree/main" target="_blank" class="footer__link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                Перейти к репозиторию
+            </a>
+        </div>
+
+        <!-- Нижний ряд: два блока в одной строке -->
+        <div class="bottom-row">
+
+            <!-- Сворачивающийся блок "Об авторе" -->
+            <details class="author-details">
+                <summary>Об авторе</summary>
+                <div class="author-details__content">
+                    <p><strong>Автор:</strong> Гаврилик Ярослав Сергеевич</p>
+                    <p><strong>Группа:</strong> ИУ5-46Б</p>
+                </div>
+            </details>
+
+            <!-- Выпадающий список (нерабочий, для интерфейса) -->
+            <div class="select-wrapper">
+                <label for="theme-select" class="select-label">Сменить тему:</label>
+                <select id="theme-select" class="modern-select">
+                    <option value="default">Госуслуги (по умолчанию)</option>
+                    <option value="dark">Тёмная</option>
+                    <option value="light">Светлая</option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

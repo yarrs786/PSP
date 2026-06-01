@@ -1,0 +1,323 @@
+/* Подключаем фирменный шрифт Госуслуг */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* === Базовые настройки страницы === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f5f9;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(30deg, #eef2f7 12%, transparent 12.5%, transparent 87%, #eef2f7 87.5%, #eef2f7),
+        linear-gradient(150deg, #eef2f7 12%, transparent 12.5%, transparent 87%, #eef2f7 87.5%, #eef2f7),
+        linear-gradient(30deg, #eef2f7 12%, transparent 12.5%, transparent 87%, #eef2f7 87.5%, #eef2f7),
+        linear-gradient(150deg, #eef2f7 12%, transparent 12.5%, transparent 87%, #eef2f7 87.5%, #eef2f7);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 340px;
+    padding-bottom: 60px;
+}
+
+/* === Калькулятор === */
+.calculator {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 8px 30px rgba(0, 82, 180, 0.12);
+    width: 100%;
+    border: 1px solid #e4eaf2;
+}
+
+/* Экран */
+.calculator__screen {
+    background-color: #f8fafd;
+    border: 1px solid #e4eaf2;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    text-align: right;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    word-break: break-all;
+    font-family: 'Inter', monospace;
+    letter-spacing: 1px;
+}
+
+/* Сетка кнопок */
+.calculator__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.calc-row {
+    display: flex;
+    gap: 6px;
+}
+
+/* === Базовый стиль всех кнопок === */
+.calc-btn {
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background-color: #f0f4fa;
+    color: #1a1a1a;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+/* Эффект при наведении */
+.calc-btn:hover {
+    background-color: #dce5f2;
+    transform: translateY(-1px);
+}
+
+/* Эффект при нажатии */
+.calc-btn:active {
+    transform: translateY(1px);
+    background-color: #c5d3e8;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Функциональные кнопки (C, ⌫, %, +/-, ΣΔ=0) */
+.calc-btn--function {
+    background-color: #e4eaf2;
+    color: #4a5b73;
+}
+
+.calc-btn--function:hover {
+    background-color: #d0daea;
+}
+
+/* Кнопки операций (/, x, -, +) */
+.calc-btn--operation {
+    background-color: #0052B4;
+    color: white;
+    font-weight: 600;
+}
+
+.calc-btn--operation:hover {
+    background-color: #003d8a;
+}
+
+/* Кнопка "=" (выполнить) */
+.calc-btn--execute {
+    background-color: #0D6EFD;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.calc-btn--execute:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.4);
+}
+
+/* Растянутая кнопка "0" */
+.calc-btn--zero {
+    flex: 2;
+}
+
+/* === Дополнительные кнопки (√, x², x!, 000, Σ, Δ) === */
+.calc-btn--extra {
+    background-color: #d4e0f2;
+    color: #0052B4;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.calc-btn--extra:hover {
+    background-color: #bfd0ea;
+}
+
+/* === Кнопка яркости (☀) === */
+.calc-btn--brightness {
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.calc-btn--brightness:hover {
+    background-color: #ffe69c;
+}
+
+/* === Кнопка смены окна === */
+.calc-btn--theme {
+    background-color: #e8e0f2;
+    color: #4a3b73;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.calc-btn--theme:hover {
+    background-color: #d5cce8;
+}
+
+/* === Футер === */
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #6b7a8d;
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer p {
+    font-weight: 500;
+}
+
+.footer__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #0052B4;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    font-size: 13px;
+}
+
+.footer__link:hover {
+    background-color: #eef2f7;
+    text-decoration: none;
+}
+
+/* === Нижний ряд: два блока в одной строке === */
+.bottom-row {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+
+/* === Сворачивающийся блок "Об авторе" === */
+.author-details {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e4eaf2;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    font-size: 12px;
+}
+
+.author-details[open] {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.author-details summary {
+    font-weight: 600;
+    color: #0052B4;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+}
+
+.author-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.author-details summary::before {
+    content: '▶';
+    font-size: 8px;
+    transition: transform 0.2s;
+    color: #0052B4;
+}
+
+.author-details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.author-details__content {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.author-details__content p {
+    margin-bottom: 3px;
+}
+
+/* === Блок "Сменить тему" === */
+.select-wrapper {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e4eaf2;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.select-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0052B4;
+    user-select: none;
+}
+
+.modern-select {
+    width: 100%;
+    padding: 8px 28px 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #e4eaf2;
+    background-color: #f8fafd;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #1a1a1a;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%234a5b73' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.modern-select:hover {
+    border-color: #0052B4;
+}
+
+.modern-select:focus {
+    outline: none;
+    border-color: #0D6EFD;
+}
