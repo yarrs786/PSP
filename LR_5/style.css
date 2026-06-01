@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background-color:#f2f5f9;min-height:100vh}
+.header{background-color:#0052B4;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,82,180,0.2);position:sticky;top:0;z-index:100}
+.header__brand{color:#fff;font-size:1.3rem;font-weight:700;text-decoration:none}
+.header__home-btn{background-color:#fff;color:#0052B4;border:none;border-radius:8px;padding:8px 18px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s}
+.header__home-btn:hover{background-color:#e8f0fa;transform:scale(1.03)}
+.main-page{max-width:1050px;margin:0 auto;padding:24px 20px}
+.main-page__header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.main-page__title{font-size:1.5rem;font-weight:700;color:#1a1a1a}
+.main-page__add-btn{background-color:#0052B4;color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.2s}
+.main-page__add-btn:hover{background-color:#003d8a;transform:translateY(-2px)}
+.filter-row{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
+.filter-input{padding:8px 14px;border-radius:8px;border:1px solid #c5d3e8;font-size:0.9rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s}
+.filter-input:focus{border-color:#0052B4}
+.filter-btn{padding:8px 18px;border-radius:8px;border:1px solid #c5d3e8;background-color:#fff;color:#4a5b73;font-size:0.9rem;font-weight:500;cursor:pointer;transition:all 0.2s}
+.filter-btn:hover{border-color:#0052B4;color:#0052B4}
+.filter-btn.active{background-color:#0052B4;color:#fff;border-color:#0052B4}
+.cards-container{display:flex;flex-wrap:wrap;gap:16px}
+.card{background-color:#fff;border-radius:14px;padding:20px;width:300px;flex-shrink:0;border:1px solid #e4eaf2;box-shadow:0 4px 16px rgba(0,82,180,0.06);transition:all 0.25s;animation:fadeIn 0.4s}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,82,180,0.15)}
+.card__header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.card__title{font-size:1.1rem;font-weight:600;color:#1a1a1a}
+.card__badge{padding:4px 10px;border-radius:6px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.card__badge--income{background-color:#d4edda;color:#155724}
+.card__badge--expense{background-color:#f8d7da;color:#721c24}
+.card__amount{font-size:1.6rem;font-weight:700;margin-bottom:8px}
+.card__amount--income{color:#28a745}
+.card__amount--expense{color:#c9302c}
+.card__date{font-size:0.85rem;color:#6b7a8d;margin-bottom:4px}
+.card__description{font-size:0.9rem;color:#4a5b73;margin-bottom:14px}
+.card__actions{display:flex;gap:8px}
+.card__btn{padding:8px 14px;border-radius:8px;border:none;font-size:0.85rem;font-weight:500;cursor:pointer;transition:all 0.2s}
+.card__btn--primary{background-color:#0052B4;color:#fff}
+.card__btn--primary:hover{background-color:#003d8a}
+.card__btn--danger{background-color:#8b3a4a;color:#fff}
+.card__btn--danger:hover{background-color:#6d2e3a}
+.card__btn--edit{background-color:#e8e0f2;color:#4a3b73}
+.card__btn--edit:hover{background-color:#d5cce8}
+.product-page{max-width:650px;margin:0 auto;padding:24px 20px}
+.product-card{background-color:#fff;border-radius:14px;padding:28px;border:1px solid #e4eaf2;box-shadow:0 6px 24px rgba(0,82,180,0.08);animation:fadeIn 0.4s}
+.product-card__header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.product-card__title{font-size:1.4rem;font-weight:700;color:#1a1a1a}
+.product-card__badge{padding:6px 14px;border-radius:8px;font-size:0.85rem;font-weight:600}
+.product-card__badge--income{background-color:#d4edda;color:#155724}
+.product-card__badge--expense{background-color:#f8d7da;color:#721c24}
+.product-card__amount{font-size:2rem;font-weight:700;margin-bottom:20px}
+.product-card__amount--income{color:#28a745}
+.product-card__amount--expense{color:#c9302c}
+.product-card__info{margin-bottom:8px;font-size:0.95rem;color:#4a5b73}
+.product-card__info strong{color:#1a1a1a}
+.product-card__divider{border:none;border-top:1px solid #e4eaf2;margin:16px 0}
+.back-btn{padding:10px 20px;border-radius:8px;border:1px solid #c5d3e8;background-color:#fff;color:#4a5b73;font-size:0.9rem;font-weight:500;cursor:pointer;margin-bottom:16px;transition:all 0.2s}
+.back-btn:hover{border-color:#0052B4;color:#0052B4}
+.toast-container{position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:8px}
+.toast{padding:14px 20px;border-radius:10px;font-size:0.9rem;font-weight:500;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.2);animation:slideInRight 0.35s;display:flex;justify-content:space-between;align-items:center;gap:12px;min-width:280px}
+.toast--success{background-color:#28a745}
+.toast--danger{background-color:#c9302c}
+.toast__close{background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer}
+@keyframes slideInRight{from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-weight:600;margin-bottom:4px;color:#1a1a1a}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 14px;border-radius:8px;border:1px solid #c5d3e8;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#0052B4}
+.form-actions{display:flex;gap:8px;margin-top:16px}
